@@ -1,0 +1,9 @@
+
+<% if current_user %>
+    <%= form_for :review, url: "#{@product.id}/reviews" do |f| %>
+        <h2>Leave a Review:</h2>
+        <textarea class="form-control" rows="3" <%= f.text_area :description %><br/></textarea>
+        <%= f.select :rating, [1, 2, 3, 4, 5] %>
+        <button type="submit" class="review btn btn-default"<%= f.submit "Submit" %>Sumbit Review</button>
+    <% end %>
+<% end %>

@@ -1,13 +1,13 @@
 class ProductsController < ApplicationController
 
   def index
-    authorize
     @products = Product.all.order(created_at: :desc)
   end
 
   def show
-    authorize
     @product = Product.find params[:id]
+    @reviews = @product.reviews.order(created_at: :desc)
+    @average = Review.where(product_id: params[:id]).average(:rating)
   end
 
 end

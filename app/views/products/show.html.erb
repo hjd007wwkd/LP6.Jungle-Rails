@@ -22,10 +22,22 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
+          <% if @average.to_i == 0 %>
+          <h4><dt>Product Rating</dt>
+            <dd>This product has not been rated yet.</dd></h4>
+          <% else %>
+          <h4><dt>Product Rating</dt>
+            <dd><%= @average.to_i %> out of 5</dd></h4>
+          <% end %>
         </dl>
       </div>
     </div>
-
+    <%= render 'review' %>
+      <h3 class="page-header"> Reviews: </h3>
+      <br/>
+      <% @reviews.each do |review| %>
+        <%= render 'rating', review: review%>
+    <% end %>
   </article>
 
 </section>
