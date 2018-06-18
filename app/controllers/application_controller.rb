@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+  # helper_method can be used in the view
   helper_method :current_user
 
   def authorize
