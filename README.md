@@ -30,6 +30,8 @@ Code is DRY and modular, follow The Rails Way.
 * Rails
 * Ruby
 * ERB
+* RSpec
+* Poltergeist/Capybara
 * Boostrap
 * PostgreSQL
 
