@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2. Learned how to navaigate existing code-bases and implement new features with an unfamiliar language. Applied previous research tactics to become familiar with new paradigms, language and frameworks. Able to implement features without thorough explanation. simulating real world situations.
+A mini e-commerce application built with Rails 4.2. Learned how to navigate existing code-bases and implement new features with an unfamiliar language. Applied previous research tactics to become familiar with new paradigms, language and frameworks. Able to implement features without thorough explanation. simulating real world situations.
 
 ## Final Product
 
