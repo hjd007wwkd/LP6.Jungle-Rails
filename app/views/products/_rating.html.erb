@@ -1,12 +1,12 @@
 <div class="col-sm-8">
   <div class="well">
     <dl class="dl-horizontal">
+      <% if current_user && current_user.id == review.user_id %>
+        <span><%= link_to 'X', product_review_path(product_id: @product.id, id: review.id), class: "btn btn-danger", method: 'delete' %></span>
+      <% end %>
       <h4>Product Rating: <%= review.rating %> out of 5<br/></h4>
       Created by <strong><%= review.user.first_name %></strong> about <%= time_ago_in_words(review.created_at) %> ago <br/><br/>
       <h5><%= review.description %></h5>
-      <% if current_user && current_user.id == review.user_id %>
-        <span><%= link_to 'delete', product_review_path(product_id: @product.id, id: review.id), method: 'delete' %></span>
-      <% end %>
     </dl>
   </div>
 </div>

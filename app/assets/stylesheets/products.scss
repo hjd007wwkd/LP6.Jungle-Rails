@@ -83,7 +83,17 @@ main section.products-show {
     img.main-img {
       max-width: 100%;
     }
+
+    .btn-danger {
+      float: right;
+    }
   }
 }
 
+main .login_form {
+  margin-top: 3%;
+  .submit {
+    margin-top: 1%;
+  }
+}
 
